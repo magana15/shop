@@ -1,8 +1,18 @@
+from rest_framework.routers import DefaultRouter
 from django.urls import path
-from . import views
+from .views import CustomerModelViewSet
 
-urlpatterns = [
+
+router = DefaultRouter()
+router.register(r'customer', CustomerModelViewSet)
+
+urlpatterns = router.urls
+
+"""[
+    
+
     path("", views.home),
     path("about/", views.about),
-    path("costomers/", views.customers),
-]
+    path("customer/", CustomerListAPIView.as_view),
+
+]"""
