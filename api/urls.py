@@ -1,18 +1,18 @@
 from rest_framework.routers import DefaultRouter
 from django.urls import path
-from .views import CustomerModelViewSet
+from . import views
 
 
 router = DefaultRouter()
-router.register(r'customer', CustomerModelViewSet)
+router.register(r'customer', views.CustomerModelViewSet)
 
-urlpatterns = router.urls
-
-"""[
+#urlpatterns += router.urls
+urlpatterns = [
     
 
     path("", views.home),
     path("about/", views.about),
-    path("customer/", CustomerListAPIView.as_view),
+    path("customers/", views. CustomerModelViewSet.as_view),
 
-]"""
+]
+urlpatterns += router.urls
