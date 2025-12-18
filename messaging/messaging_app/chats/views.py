@@ -5,6 +5,7 @@ from .serializers import ConversationSerializer, MessageSerializer
 from .permissions import IsParticipantOfConversation
 from django_filters.rest_framework import DjangoFilterBackend
 from .filters import MessageFilter
+from django.http import HttpResponse
 class ConversationViewSet(viewsets.ModelViewSet):
     serializer_class = ConversationSerializer
     permission_classes = [IsParticipantOfConversation]
@@ -68,3 +69,5 @@ class MessageViewSet(viewsets.ModelViewSet):
         )
 
 
+def home(request):
+    return HttpResponse("<h1>This is message api. We are working properly. Checkout <a href='http://localhost:8000/api'>message API</a>.</h1>")
