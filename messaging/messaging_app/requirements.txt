@@ -2,10 +2,12 @@ amqp==5.3.1
 asgiref==3.10.0
 billiard==4.2.4
 celery==5.6.0
+cffi==2.0.0
 click==8.3.1
 click-didyoumean==0.3.1
 click-plugins==1.1.1.2
 click-repl==0.3.0
+cryptography==46.0.3
 Django==5.2.7
 django-cors-headers==4.9.0
 django-environ==0.12.0
@@ -24,7 +26,9 @@ mysqlclient==2.2.7
 packaging==25.0
 promise==2.3
 prompt_toolkit==3.0.52
+pycparser==2.23
 PyJWT==2.10.1
+PyMySQL==1.1.2
 python-dateutil==2.9.0.post0
 pytz==2025.2
 PyYAML==6.0.3
