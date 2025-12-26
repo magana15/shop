@@ -7,6 +7,7 @@ pipeline {
                 dir('messaging/messaging_app'){
                     git credentialsId: 'magana15',
                         url: 'https://github.com/magana15/shop'
+                        echo "code checkout success"
                 }
             }
         }
@@ -20,6 +21,7 @@ pipeline {
                 pip install --upgrade pip
                 pip install -r requirements.txt
                 pip install pytest pytest-html
+                echo "dependencies install complete"
                 '''
                 }
             }
@@ -31,6 +33,7 @@ pipeline {
                 sh '''
                 . venv/bin/activate
                 pytest --html=report.html --self-contained-html
+                echo "report saved successfully"
                 '''
                 }
             }
