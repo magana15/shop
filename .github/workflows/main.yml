@@ -1,12 +1,13 @@
-name: my_workflow
-
+name: real_workflow
 on: push
-
 jobs:
-  greeting:
+  one:
     runs-on: ubuntu-latest
     steps:
-      - name: message
-        run: echo "hello world"
-      - name: say_hi
-        run: echo "work done"
+      - name: greet
+        run: echo "hello there"
+  two:
+    runs-on: ubuntu-latest
+    steps:
+      - name: question
+        run: echo "are sure you understand"
