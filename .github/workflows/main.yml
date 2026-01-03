@@ -1,13 +1,11 @@
-name: real_workflow
+name: trial_workflow
 on: push
 jobs:
-  one:
+  first:
     runs-on: ubuntu-latest
     steps:
-      - name: greet
-        run: echo "hello there"
-  two:
-    runs-on: ubuntu-latest
-    steps:
-      - name: question
-        run: echo "are sure you understand"
+      - name: greeting
+        run: echo "hello there today"
+      - name: asking
+        run: echo "are you okay?"
+ 
