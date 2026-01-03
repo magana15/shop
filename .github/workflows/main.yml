@@ -1,0 +1,12 @@
+name: my_workflow
+
+on: push
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: message
+        run: echo "hello world"
+      - name: say_hi
+        run: echo "work done"
